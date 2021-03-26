@@ -1,41 +1,28 @@
-function Calculator (){
-    return(
-        
-	<div className="container">
-    <div className="row">
-        <div className="col-md-12 col12">
-            <h1 className="text-right">0</h1></div>
-    </div>
-    <div className="row">
-        <div className="col-md-3 col3"><h1>AC</h1></div>
-        <div className="col-md-3 col3"><h1>+/-</h1></div>
-        <div className="col-md-3 col3"><h1>%</h1></div>
-        <div className="col-md-3 col4"><h1>÷</h1></div>
-    </div>
-    <div className="row">
-        <div className="col-md-3 col3"><h1>7</h1></div>
-        <div className="col-md-3 col3"><h1>8</h1></div>
-        <div className="col-md-3 col3"><h1>9</h1></div>
-        <div className="col-md-3 col4"><h1>×</h1></div>
-    </div>
-    <div className="row">
-        <div className="col-md-3 col3"><h1>4</h1></div>
-        <div className="col-md-3 col3"><h1>5</h1></div>
-        <div className="col-md-3 col3"><h1>6</h1></div>
-        <div className="col-md-3 col4"><h1>-</h1></div>
-    </div>
-    <div className="row">
-        <div className="col-md-3 col3"><h1>1</h1></div>
-        <div className="col-md-3 col3"><h1>2</h1></div>
-        <div className="col-md-3 col3"><h1>3</h1></div>
-        <div className="col-md-3 col4"><h1>+</h1></div>
-    </div>
-    <div className="row">
-        <div className="col-md-6 col3"><h1>0</h1></div>
-        <div className="col-md-3 col3"><h1>.</h1></div>
-        <div className="col-md-3 col4"><h1>=</h1></div>
-    </div>	
-</div>
-    )
-}
-export default Calculator;
+import { Component } from "react";
+import Display from "./Display";
+import Row from "./Row";
+import Subrow from "./Subrow";
+
+
+class Calculator extends Component{
+    
+    render(){
+      return(
+        <div>
+            <div className="container">
+                <Display displayNumber="0"/>
+				<Row value1="AC" value2="+/-" value3="%" value4="÷"/>
+				<Row value1="7" value2="8" value3="9" value4="x"/>
+				<Row value1="4" value2="5" value3="6" value4="-"/>
+				<Row value1="1" value2="2" value3="3" value4="+"/>
+				<Subrow value1="0" value2="." value3="="></Subrow>
+
+        </div>
+		</div>
+		
+  
+      )
+    }
+  }
+  export default Calculator;
+  
